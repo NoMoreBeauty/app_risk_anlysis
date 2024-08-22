@@ -1,0 +1,78 @@
+背景：
+你现在是一名专业的移动平台的应用审核工程师，你现在的工作是通过分析应用的各项指标或特征，判断应用是否可能存在权限滥用的风险。
+
+示例：
+1. 系统工具类的应用可以申请的权限有：读取存储空间权限（READ_EXTERNAL_STORAGE）,写入存储空间权限（WRITE_EXTERNAL_STORAGE）,读取设备信息权限（READ_PHONE_STATE）,网络访问权限（INTERNET）,修改系统设置权限（WRITE_SETTINGS）,访问Wi-Fi状态权限（ACCESS_WIFI_STATE）;
+2. 桌面插件类的应用可以申请的权限有：读取存储空间权限（READ_EXTERNAL_STORAGE）,访问壁纸权限（SET_WALLPAPER）,访问网络状态权限（ACCESS_NETWORK_STATE）,获取当前应用信息权限（GET_TASKS）,访问通知权限（BIND_NOTIFICATION_LISTENER_SERVICE）;
+3. 主题美化类的应用可以申请的权限有：读取存储空间权限（READ_EXTERNAL_STORAGE）,写入存储空间权限（WRITE_EXTERNAL_STORAGE）,访问壁纸权限（SET_WALLPAPER）,访问网络状态权限（ACCESS_NETWORK_STATE）,修改系统设置权限（WRITE_SETTINGS）;
+4. 社交聊天类的应用可以申请的权限有：访问通讯录权限（READ_CONTACTS）,读取短信权限（READ_SMS）,发送短信权限（SEND_SMS）,录音权限（RECORD_AUDIO）,读取存储空间权限（READ_EXTERNAL_STORAGE）,使用摄像头权限（CAMERA）,网络访问权限（INTERNET）;
+5. 资讯阅读类的应用可以申请的权限有：网络访问权限（INTERNET）,读取存储空间权限（READ_EXTERNAL_STORAGE）,写入存储空间权限（WRITE_EXTERNAL_STORAGE）,访问网络状态权限（ACCESS_NETWORK_STATE）,获取推送通知权限（RECEIVE_BOOT_COMPLETED）;
+6. 通讯网络类的应用可以申请的权限有：访问通讯录权限（READ_CONTACTS）,读取短信权限（READ_SMS）,发送短信权限（SEND_SMS）,读取通话记录权限（READ_CALL_LOG）,拨打电话权限（CALL_PHONE）,网络访问权限（INTERNET）;
+7. 影音娱乐类的应用可以申请的权限有：使用摄像头权限（CAMERA）,录音权限（RECORD_AUDIO）,读取存储空间权限（READ_EXTERNAL_STORAGE）,写入存储空间权限（WRITE_EXTERNAL_STORAGE）,网络访问权限（INTERNET）;
+8. 摄影拍照类的应用可以申请的权限有：使用摄像头权限（CAMERA）,读取存储空间权限（READ_EXTERNAL_STORAGE）,写入存储空间权限（WRITE_EXTERNAL_STORAGE）,网络访问权限（INTERNET）,定位权限（ACCESS_FINE_LOCATION）;
+9. 生活服务类的应用可以申请的权限有：定位权限（ACCESS_FINE_LOCATION）,读取存储空间权限（READ_EXTERNAL_STORAGE）,写入存储空间权限（WRITE_EXTERNAL_STORAGE）,网络访问权限（INTERNET）,读取通讯录权限（READ_CONTACTS）;
+10. 实用工具类的应用可以申请的权限有：读取存储空间权限（READ_EXTERNAL_STORAGE）,写入存储空间权限（WRITE_EXTERNAL_STORAGE）,网络访问权限（INTERNET）,访问Wi-Fi状态权限（ACCESS_WIFI_STATE）,修改系统设置权限（WRITE_SETTINGS）;
+11. 文档商务类的应用可以申请的权限有：读取存储空间权限（READ_EXTERNAL_STORAGE）,写入存储空间权限（WRITE_EXTERNAL_STORAGE）,网络访问权限（INTERNET）,访问通讯录权限（READ_CONTACTS）,使用摄像头权限（CAMERA）;
+12. 金融财经类的应用可以申请的权限有：读取存储空间权限（READ_EXTERNAL_STORAGE）,写入存储空间权限（WRITE_EXTERNAL_STORAGE）,网络访问权限（INTERNET）,访问网络状态权限（ACCESS_NETWORK_STATE）,获取设备信息权限（READ_PHONE_STATE）;
+13. 运动健康类的应用可以申请的权限有：定位权限（ACCESS_FINE_LOCATION）,读取存储空间权限（READ_EXTERNAL_STORAGE）,写入存储空间权限（WRITE_EXTERNAL_STORAGE）,使用摄像头权限（CAMERA）,录音权限（RECORD_AUDIO）,网络访问权限（INTERNET）;
+14. 学习教育类的应用可以申请的权限有：网络访问权限（INTERNET）,读取存储空间权限（READ_EXTERNAL_STORAGE）,写入存储空间权限（WRITE_EXTERNAL_STORAGE）,使用摄像头权限（CAMERA）,录音权限（RECORD_AUDIO）;
+15. 旅行交通类的应用可以申请的权限有：定位权限（ACCESS_FINE_LOCATION）,网络访问权限（INTERNET）,读取存储空间权限（READ_EXTERNAL_STORAGE）,写入存储空间权限（WRITE_EXTERNAL_STORAGE）,读取短信权限（READ_SMS）;
+16. 购物类的应用可以申请的权限有：网络访问权限（INTERNET）,读取存储空间权限（READ_EXTERNAL_STORAGE）,写入存储空间权限（WRITE_EXTERNAL_STORAGE）,获取设备信息权限（READ_PHONE_STATE）,获取推送通知权限（RECEIVE_BOOT_COMPLETED）;
+
+任务：
+请你根据下面数据中提供的应用特征，结合示例中的知识，先判断应用的类型，再结合用户评论分析其静态申请的权限（Manifext文件中申请的权限）是否合理（与应用类型匹配）。
+如果存在可能有风险的权限申请信息，请你以json格式输出，输出内容中key是你认为有风险的权限申请，value是你的理由。
+记住，你只需要输出json格式的结果！
+
+数据：
+***应用简介***
+SecureChat 是一款先进的即时通讯应用，专为注重隐私和安全的用户设计。我们的应用采用了端到端加密技术，确保您的每一条信息都只能由您和收件人查看。无论您是发送文本、图片还是视频，SecureChat 都能为您提供最安全的通讯体验。此外，SecureChat 支持全球范围内的语音和视频通话，高清流畅，让您随时随地与家人朋友保持联系。为了提供更多功能，我们还集成了社交分享、位置服务、联系人管理等多种实用工具，打造全方位的通讯解决方案。
+
+***manifest***
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.securechat.app">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <uses-permission android:name="android.permission.WRITE_CALL_LOG" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+    <uses-permission android:name="android.permission.BIND_ACCESSIBILITY_SERVICE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+    </application>
+</manifest>
+
+
+***用户评论***
+用户A：自从更新到最新版本，SecureChat 就一直在要求获取我手机的定位权限，尽管我根本没打算用它来分享位置。为什么一个聊天应用需要知道我在哪里？这让我非常不安，感觉我的隐私正被侵犯。
+用户B：这个应用不仅要求读取我的联系人列表，还试图访问我的通话记录和短信内容！这简直是太过分了，我只是想要一个安全的聊天工具，没想到它反而成了最大的威胁。

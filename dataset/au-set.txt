@@ -1,0 +1,16 @@
+系统工具类的应用可以申请的权限有：读取存储空间权限（READ_EXTERNAL_STORAGE）,写入存储空间权限（WRITE_EXTERNAL_STORAGE）,读取设备信息权限（READ_PHONE_STATE）,网络访问权限（INTERNET）,修改系统设置权限（WRITE_SETTINGS）,访问Wi-Fi状态权限（ACCESS_WIFI_STATE）;
+桌面插件类的应用可以申请的权限有：读取存储空间权限（READ_EXTERNAL_STORAGE）,访问壁纸权限（SET_WALLPAPER）,访问网络状态权限（ACCESS_NETWORK_STATE）,获取当前应用信息权限（GET_TASKS）,访问通知权限（BIND_NOTIFICATION_LISTENER_SERVICE）;
+主题美化类的应用可以申请的权限有：读取存储空间权限（READ_EXTERNAL_STORAGE）,写入存储空间权限（WRITE_EXTERNAL_STORAGE）,访问壁纸权限（SET_WALLPAPER）,访问网络状态权限（ACCESS_NETWORK_STATE）,修改系统设置权限（WRITE_SETTINGS）;
+社交聊天类的应用可以申请的权限有：访问通讯录权限（READ_CONTACTS）,读取短信权限（READ_SMS）,发送短信权限（SEND_SMS）,录音权限（RECORD_AUDIO）,读取存储空间权限（READ_EXTERNAL_STORAGE）,使用摄像头权限（CAMERA）,网络访问权限（INTERNET）;
+资讯阅读类的应用可以申请的权限有：网络访问权限（INTERNET）,读取存储空间权限（READ_EXTERNAL_STORAGE）,写入存储空间权限（WRITE_EXTERNAL_STORAGE）,访问网络状态权限（ACCESS_NETWORK_STATE）,获取推送通知权限（RECEIVE_BOOT_COMPLETED）;
+通讯网络类的应用可以申请的权限有：访问通讯录权限（READ_CONTACTS）,读取短信权限（READ_SMS）,发送短信权限（SEND_SMS）,读取通话记录权限（READ_CALL_LOG）,拨打电话权限（CALL_PHONE）,网络访问权限（INTERNET）;
+影音娱乐类的应用可以申请的权限有：使用摄像头权限（CAMERA）,录音权限（RECORD_AUDIO）,读取存储空间权限（READ_EXTERNAL_STORAGE）,写入存储空间权限（WRITE_EXTERNAL_STORAGE）,网络访问权限（INTERNET）;
+摄影拍照类的应用可以申请的权限有：使用摄像头权限（CAMERA）,读取存储空间权限（READ_EXTERNAL_STORAGE）,写入存储空间权限（WRITE_EXTERNAL_STORAGE）,网络访问权限（INTERNET）,定位权限（ACCESS_FINE_LOCATION）;
+生活服务类的应用可以申请的权限有：定位权限（ACCESS_FINE_LOCATION）,读取存储空间权限（READ_EXTERNAL_STORAGE）,写入存储空间权限（WRITE_EXTERNAL_STORAGE）,网络访问权限（INTERNET）,读取通讯录权限（READ_CONTACTS）;
+实用工具类的应用可以申请的权限有：读取存储空间权限（READ_EXTERNAL_STORAGE）,写入存储空间权限（WRITE_EXTERNAL_STORAGE）,网络访问权限（INTERNET）,访问Wi-Fi状态权限（ACCESS_WIFI_STATE）,修改系统设置权限（WRITE_SETTINGS）;
+文档商务类的应用可以申请的权限有：读取存储空间权限（READ_EXTERNAL_STORAGE）,写入存储空间权限（WRITE_EXTERNAL_STORAGE）,网络访问权限（INTERNET）,访问通讯录权限（READ_CONTACTS）,使用摄像头权限（CAMERA）;
+金融财经类的应用可以申请的权限有：读取存储空间权限（READ_EXTERNAL_STORAGE）,写入存储空间权限（WRITE_EXTERNAL_STORAGE）,网络访问权限（INTERNET）,访问网络状态权限（ACCESS_NETWORK_STATE）,获取设备信息权限（READ_PHONE_STATE）;
+运动健康类的应用可以申请的权限有：定位权限（ACCESS_FINE_LOCATION）,读取存储空间权限（READ_EXTERNAL_STORAGE）,写入存储空间权限（WRITE_EXTERNAL_STORAGE）,使用摄像头权限（CAMERA）,录音权限（RECORD_AUDIO）,网络访问权限（INTERNET）;
+学习教育类的应用可以申请的权限有：网络访问权限（INTERNET）,读取存储空间权限（READ_EXTERNAL_STORAGE）,写入存储空间权限（WRITE_EXTERNAL_STORAGE）,使用摄像头权限（CAMERA）,录音权限（RECORD_AUDIO）;
+旅行交通类的应用可以申请的权限有：定位权限（ACCESS_FINE_LOCATION）,网络访问权限（INTERNET）,读取存储空间权限（READ_EXTERNAL_STORAGE）,写入存储空间权限（WRITE_EXTERNAL_STORAGE）,读取短信权限（READ_SMS）;
+购物类的应用可以申请的权限有：网络访问权限（INTERNET）,读取存储空间权限（READ_EXTERNAL_STORAGE）,写入存储空间权限（WRITE_EXTERNAL_STORAGE）,获取设备信息权限（READ_PHONE_STATE）,获取推送通知权限（RECEIVE_BOOT_COMPLETED）;

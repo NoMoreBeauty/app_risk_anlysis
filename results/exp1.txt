@@ -1,0 +1,35 @@
+prompt: field_filter.txt
+
+answer-tongyi: {
+    "virus_flag": "直接反映应用是否携带病毒",
+    "security_result": "明确指出应用的安全等级",
+    "avg_adv_score": "反映用户对于广告的负面反馈程度",
+    "avg_tc_score": "反映用户对于弹窗的负面反馈程度",
+    "avg_pe_score": "反映用户对于隐私泄露的负面反馈程度",
+    "avg_qz_score": "反映用户对于强制行为的负面反馈程度",
+    "avg_qp_score": "反映用户对于欺诈行为的负面反馈程度",
+    "avg_db_score": "反映用户对于盗版的负面反馈程度",
+    "avg_zp_score": "反映用户对于诈骗行为的负面反馈程度",
+    "req_perm_info": "列出应用请求的所有权限，有助于发现权限滥用问题",
+    "malicious_result_type_id": "直接关联到恶意行为的具体类型",
+    "malicious_score": "量化恶意行为的程度",
+    "malicious_detect_results": "详细记录了检测到的恶意行为"
+}
+
+answer-GPT4: {
+    "app_level_code": "应用级别代码可以标注应用是否已被下架，这可能与安全问题有关。",
+    "virus_flag": "病毒标志直接表明应用可能存在恶意软件风险。",
+    "security_result": "安全返回结果值可以判断应用的安全等级，其中非0值可能表明存在潜在风险。",
+    "avg_adv_score": "广告反馈均值可以帮助评估应用是否存在过度广告的问题。",
+    "avg_tc_score": "弹窗反馈均值用于判断应用是否存在过多弹窗的用户体验问题。",
+    "avg_pe_score": "隐私反馈均值用于评估应用在用户隐私方面可能存在的风险。",
+    "avg_qz_score": "强制反馈均值可以表明应用是否存在强制行为的风险。",
+    "avg_qp_score": "欺诈反馈均值可能表明应用存在欺诈行为的风险。",
+    "avg_db_score": "盗版反馈均值可能表明应用涉及盗版内容的风险。",
+    "avg_zp_score": "诈骗反馈均值可能表明应用涉及诈骗行为的风险。",
+    "req_perm_info": "权限请求信息序列可以帮助判断应用是否存在权限滥用的风险。",
+    "malicious_result_type_id": "命中的检测结果编号用于判断应用是否涉及恶意行为的具体类型。",
+    "malicious_score": "检测结果的综合得分用于量化应用的恶意风险。",
+    "malicious_detect_results": "检测内容与命中情况详细描述了应用可能存在的恶意行为。",
+    "emotion_rating": "评论的情感得分可以提供用户对应用的情感反馈，有助于判断用户是否因风险行为而感到不满。"
+}
