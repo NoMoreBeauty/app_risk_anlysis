@@ -10,7 +10,7 @@ os.environ["DASHSCOPE_API_KEY"] = "sk-8461d57af4954b3f82e20b589b7c58c7"
 
 llm = Tongyi()
 
-prompt = get_prompt('./modules/permission-module/prompts/classification2.txt')
+prompt = get_prompt('./modules/permission-module/prompts/find_outlier.txt')
 # print(prompt)
 message = [
     SystemMessage(prompt),

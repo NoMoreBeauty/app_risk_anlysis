@@ -1,0 +1,56 @@
+背景：
+你现在是一名专业的移动平台的应用审核工程师，你现在的工作是根据提供的应用类别和应用的manifest文件，判断应用是否存在过渡申请的有风险权限。
+
+任务：
+请你根据下面提供的应用类别及其manifest文件，判断应用是否存在过渡申请的有风险权限。
+
+在Android操作系统中，权限可以分为：
+1. 正常权限（Normal Permissions）：这些权限允许应用程序访问一些相对低风险的资源或数据，不涉及用户隐私或系统安全。系统会在应用安装时自动授予这些权限，无需用户同意。
+2. 危险权限（Dangerous Permissions）：这些权限允许应用访问更为敏感的数据或操作，可能涉及用户隐私或对设备产生较大的影响。危险权限通常按权限组分类，在应用程序请求这些权限时，系统会弹出提示请求用户授权。
+3. 签名权限（Signature Permissions）：这些权限只有在应用签名与系统或其他应用的签名一致时才能授予。一般用于系统应用或与系统高度集成的应用。
+4. 特权权限（Privileged Permissions）：这些权限一般只能由系统应用或特定的预装应用使用，涉及非常高权限的操作，如系统设置的修改、网络栈的访问等
+
+记住，你需要以json的格式输出过渡申请的权限及其类别，如果权限申请是合理的，请输出None，你只需要输出结果！
+
+数据：
+{
+    "应用元数据": {
+        "应用名称": "超级清理大师",
+        "应用开发商": "极速科技有限公司",
+        "应用包名": "com.jisukeji.supercleaner"
+    },
+    "应用类别": "系统工具",
+    "manifest文件" : "<?xml version="1.0" encoding="utf-8"?>
+                        <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+                            package="com.example.maliciousapp">
+
+                            <application
+                                android:label="System Tool"
+                                android:icon="@mipmap/ic_launcher"
+                                android:theme="@style/AppTheme">
+
+                                <activity android:name=".MainActivity">
+                                    <intent-filter>
+                                        <action android:name="android.intent.action.MAIN" />
+                                        <category android:name="android.intent.category.LAUNCHER" />
+                                    </intent-filter>
+                                </activity>
+                            </application>
+
+                            <uses-permission android:name="android.permission.INTERNET" />
+                            <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+                            
+                            <uses-permission android:name="android.permission.READ_CONTACTS" />
+                            <uses-permission android:name="android.permission.RECORD_AUDIO" />
+                            <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+                            <uses-permission android:name="android.permission.SEND_SMS" />
+
+                            <uses-permission android:name="android.permission.BROADCAST_SMS"
+                                android:protectionLevel="signature" />
+
+                            <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS"
+                                android:protectionLevel="signature|privileged" />
+
+                        </manifest>" 
+}
+
