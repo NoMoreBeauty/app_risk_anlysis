@@ -20,6 +20,7 @@
         "应用包名": "com.jisukeji.supercleaner"
     },
     "应用类别": "系统工具",
+    "应用简介": "超级清理大师是一款强大的系统工具类应用，专为安卓设备提供一键清理垃圾、优化内存和提升性能的功能。通过智能扫描和精准识别，快速清除无用的缓存文件、广告垃圾和重复文件，让您的手机时刻保持最佳状态。此外，该应用还具备CPU降温、电池优化等实用功能，全方位提升设备的使用体验，是安卓用户不可或缺的维护工具。",
     "manifest文件" : "<?xml version="1.0" encoding="utf-8"?>
                         <manifest xmlns:android="http://schemas.android.com/apk/res/android"
                             package="com.example.maliciousapp">
