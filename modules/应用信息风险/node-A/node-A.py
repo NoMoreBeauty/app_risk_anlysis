@@ -22,7 +22,7 @@ def execute_query(appid):
     输入的参数是appid，返回的结果是一个内容是0或1的列表。
     """
 
-    return [0,0,0,0,1]
+    return [1,1,1,1,1]
     
 def create_agent(template, llm):
     prompt = PromptTemplate.from_template(template)
