@@ -5,6 +5,7 @@ from langchain_core.prompts import PromptTemplate
 from langchain.agents import create_react_agent, AgentExecutor
 from langchain_community.agent_toolkits.load_tools import load_tools
 from langchain_core.tools import tool
+from decision_a import main
 
 os.environ["DASHSCOPE_API_KEY"] = "sk-7daf40f436cc48dfa96b5367f78cd419"
 llm = Tongyi()
@@ -22,7 +23,7 @@ def execute_query(appid):
     输入的参数是appid，返回的结果是一个内容是0或1的列表。
     """
 
-    return [1,1,1,1,1]
+    return main(appid)
     
 def create_agent(template, llm):
     prompt = PromptTemplate.from_template(template)
