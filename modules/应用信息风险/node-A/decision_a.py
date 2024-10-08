@@ -1,5 +1,8 @@
 # 名称或图标与其他应用过于相似，导致用户混淆或知识产权侵权
 import yaml
+import sys
+sys.path.append('/Users/wangjh/workspace/app_risk_anlysis/modules/评论处理')
+from comments_summarize import comments_sum
 
 total_testing_items = 6
 total_testing_items_names = ['ip_tort', 'counterfeit', 'hmogenization', 'hormonyUX', 'similarity', 'comment']
@@ -62,14 +65,17 @@ def similarity(data)->bool:
 def comment(data)->bool:
     # TODO
     # 评论太多超出context size怎么处理
-
     cmt = data['comment']  # comment list
     cmt_total = ''
     for c in range(len(cmt)):
-        temp_coment = f'第{c}条评论说：{cmt[c]}\n'
+        temp_coment = f'{c}：{cmt[c]}\n'
         cmt_total += temp_coment
-    
-    
+    res = comments_sum(data = cmt_total)
+    ans = res.split(' - ')[0]
+    if ans == '存在':
+        return 1
+    elif ans == '不存在':
+        return 0
 
 def similarity(data)->bool:
     '''
@@ -90,7 +96,8 @@ def main(data):
     return results
 
 if __name__ == '__main__':
-    x = main({'handle_code':'CGjh016'})
+    x = main({'handle_code':'CGjh016' , 'comment':['应用收集了我的个人信息，感觉不安全。','界面不友好，操作起来很麻烦。','频繁崩溃，根本无法使用。','名称和图标太像，下载后才发现是仿冒。','这款应用宣传不实，功能与描述完全不符。']})
+    # comments = comment({'handle_code':'CGjh016' , 'comment':['应用收集了我的个人信息，感觉不安全。','界面不友好，操作起来很麻烦。','频繁崩溃，根本无法使用。']})
     print(x)
     # init('/Users/wangjh/workspace/app_risk_anlysis/modules/应用信息风险/node-A/config.yaml')
     # print(configs)
