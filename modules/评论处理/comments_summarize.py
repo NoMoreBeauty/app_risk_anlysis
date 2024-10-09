@@ -29,4 +29,15 @@ def comments_sum(path1 = '/Users/wangjh/workspace/app_risk_anlysis/modules/评�
     return response
 
 if __name__ == '__main__':
-    comments_sum()
+    r = comments_sum(data='''1. 名称和图标太像，下载后才发现是仿冒。
+2. 这款应用宣传不实，功能与描述完全不符。
+3. 下载后看到不适当内容，体验极差，真让人失望。
+4. 使用后发现有广告弹窗，体验不佳。
+5. 应用收集了我的个人信息，感觉不安全。
+6. 界面不友好，操作起来很麻烦。
+7. 频繁崩溃，根本无法使用。
+8. 付款后没得到任何服务，像是被骗了。
+9. 内容更新慢，很多功能都没用。
+10. 论坛里的评论虚假，大家注意了！
+''')
+    print(r)
