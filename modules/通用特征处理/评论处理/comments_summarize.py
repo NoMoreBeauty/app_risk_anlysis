@@ -16,7 +16,7 @@ def create_llm(model = 'tongyi'):
         llm = Tongyi()
         return llm
 
-def comments_sum(path1 = '/Users/wangjh/workspace/app_risk_anlysis/modules/评论处理/prompt_template.txt', data = ''):
+def comments_sum(path1 = '/Users/wangjh/workspace/app_risk_anlysis/modules/通用特征处理/评论处理/prompt_template.txt', data = ''):
     prompt = get_prompt(path1)
     # data = get_prompt('/Users/wangjh/workspace/app_risk_anlysis/modules/评论处理/data_positive.txt')
     prompt = prompt + data
